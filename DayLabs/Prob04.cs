@@ -2,18 +2,16 @@
 {
     internal class Prob04
     {
-        public Prob04() { }
-
-        public void largestSmallestInArray()
+        internal void positiveNegativeZero()
         {
-            int[] array = new int[5];
-            Console.WriteLine("Enter 5 elements:");
-            for(int i=0; i<5; i++)
+            Console.WriteLine("Enter a number:");
+            string input = Console.ReadLine();
+            if(int.TryParse(input, out int number))
             {
-                array[i] = int.Parse(s: Console.ReadLine());
+                Console.WriteLine("Entered Number {0} is {1}",number,(number==0?"zero":number>0?"positive":"negative"));
+                
             }
-            Array.Sort(array);
-            Console.WriteLine(array[0]+"-> min," + array[array.Length-1]+"-> max.");
+
         }
     }
 }

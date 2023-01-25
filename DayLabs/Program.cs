@@ -1,38 +1,46 @@
-﻿namespace DayLabs
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DayLabs
 {
     internal class Program
     {
-        static void Main()
+        //Day Two
+        static void Main(string[] args)
         {
-            Prob01 prob01 = new();
+            //Prob01 prob01 = new Prob01();
+            //prob01.checkEvenOdd();
 
-            Prob02 prob02 = new();
-            prob02.declareAndInitializeDataTypes();
+            //Prob02 prob02 = new Prob02();
+            //prob02.checkPrimeOrNot();
 
-            Prob03 prob03 = new();
-            prob03.arithmeticOperations();
+            //Prob03 prob03 = new Prob03();
+            //prob03.checkVowelOrConsonant();
 
-            Prob04 prob04 = new();
-            prob04.largestSmallestInArray();
+            //Prob04 prob04 = new Prob04();
+            //prob04.positiveNegativeZero();
 
-            Prob05 prob05 = new();
-            prob05.findlengthOfString("Hello, World!");
+            //Prob05 prob05 = new Prob05();
+            //prob05.checkNumDivisibleby3();
 
-            Prob06 prob06 = new();
-            prob06.reverseString("Hello, World!");
+            //Prob06 prob06 = new Prob06();
+            //prob06.maxOfThreeNumbers();
 
-            Prob07 prob07 = new();
-            prob07.checkLeapYear(1992);
+            //Prob07 prob07 = new Prob07();
+            //prob07.checkPalindrome();
 
-            Prob08 prob08 = new();
-            Console.WriteLine("Factorial of {0} is {1}",10,prob08.findFactorial(10));
+            //Prob08 prob08 = new Prob08();
+            //prob08.checkPointInRectangle();
 
-            Prob09 prob09 = new();
-            prob09.generateFibonacciSeries(10);
+            //Prob09 prob09 = new Prob09();
+            //prob09.checkNumBW1_10();
 
-            Prob10 prob10 = new();
-            prob10.areaAndXfOfCircle();
-            
+            Prob10 prob10 = new Prob10();
+            prob10.checkDigOrLetter();
         }
+        
     }
 }

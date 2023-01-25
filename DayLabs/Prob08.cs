@@ -2,25 +2,39 @@
 {
     internal class Prob08
     {
-        public Prob08()
+        internal void checkPointInRectangle()
         {
-        }
+            Console.WriteLine("Enter four space separated parameters as X, Y, Height and Width:");
+            string input = Console.ReadLine();
 
-        public int findFactorial(int n)
-        {
-            int factorial = 1;
-            if (n < 0)
+            //string[] dims = input.Split(" ");
+            int[] dims = Array.ConvertAll(input.Split(" "), int.Parse);
+
+            Console.WriteLine("Enter the coordinates(X,Y) of the point:");
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+
+            if (dims.Length < 4)
             {
-                return -1;
+                Console.WriteLine("Invalid input");
             }
-            if(n == 0) {
-                return 1;
-            }
-            else 
+            else
             {
-                factorial = n*findFactorial(n-1);
+                if (x < dims[0]
+                    || x > dims[3]
+                    || y < dims[1]
+                    || y > dims[2])
+                {
+                    Console.WriteLine("Out of the rectangle");
+                }
+                else if (x > dims[0] && x < dims[3] && y < dims[1] && y > dims[2]){
+                    Console.WriteLine("Inside the rectangle");
+                }
+                else
+                {
+                    Console.WriteLine("On the Rectangle");
+                }
             }
-            return factorial;
         }
     }
 }

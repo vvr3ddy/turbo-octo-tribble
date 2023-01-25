@@ -2,32 +2,25 @@
 {
     internal class Prob07
     {
-        public Prob07() { }
-
-        public void checkLeapYear(int year)
+        public Prob07()
         {
-            if (year % 4 == 0)
+        }
+
+        internal void checkPalindrome()
+        {
+            Console.WriteLine("Enter a string:");
+            string str = Console.ReadLine();
+            int j = str.Length-1;
+            bool flag = false;
+
+            for(int i = 0; i<str.Length/2; i++)
             {
-                if (year % 100 == 0)
+                if (str[i] == str[j - i])
                 {
-                    if (year % 400 == 0)
-                    {
-                        Console.WriteLine("Year {0} is a century leap year",year);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Year {0} is not a leap year", year);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Year {0} is a leap year.",year);
+                    flag = true;
                 }
             }
-            else
-            {
-                Console.WriteLine("Year {0} is not a leap year", year);
-            }
+            Console.WriteLine("The entered string \"{0}\" is {1} palindrome",str,flag==true?"a":"not a");
         }
     }
 }

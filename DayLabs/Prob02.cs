@@ -5,22 +5,26 @@
         public Prob02()
         {
         }
-        public void declareAndInitializeDataTypes()
-        {
-            int i = 0;
-            float f = 3.14f;
-            double d = 1.2;
-            char ch = 'a';
-            string s = "Hello, World!";
-            bool b = true;
 
-            Console.WriteLine("int:{0} " +
-                "float: {1}" +
-                "double: {2}" +
-                "char: {3}" +
-                "string: {4}" +
-                "bool: {5}" +
-                "", i, f, d, ch, s, b);
+        internal void checkPrimeOrNot()
+        {
+            Console.WriteLine("Enter a number.");
+            string input = Console.ReadLine();
+            int num = int.TryParse(input,out int number)==true?int.Parse(input):0;
+            bool prime = true;
+            if (num <= 1 || num % 2 == 0) prime = false;
+            if (num == 2) prime = true;
+            else
+            {
+                for (int i = 3; i < Math.Sqrt(num); i++)
+                {
+                    if (num % i == 0)
+                    {
+                        prime = false;
+                    }
+                }
+            }
+            Console.WriteLine("Entered Number {0} is {1}",num,prime?"prime":"not a prime");
         }
     }
 }

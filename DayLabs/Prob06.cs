@@ -2,14 +2,20 @@
 {
     internal class Prob06
     {
-        public Prob06() { }
-
-        public void reverseString(string s)
+        internal void maxOfThreeNumbers()
         {
-            char[] strs = s.ToCharArray();
-            Array.Reverse(strs);
-            string s1 = new string(strs);
-            Console.WriteLine("String {0} when reversed is {1}", s, s1);
+            Console.WriteLine("Enter three numbers:");
+            int[] arr = new int[3];
+            for(int i = 0; i<3; i++)
+            {
+                if(int.TryParse(Console.ReadLine(),out int number))
+                {
+                    arr[i] = number;
+                }
+            }
+            arr = arr.OrderByDescending(e => e).ToArray();
+            Console.WriteLine("Max of the entered numbers is {0}", arr[0]);
+
         }
     }
 }

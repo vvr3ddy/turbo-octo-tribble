@@ -2,19 +2,13 @@
 {
     internal class Prob09
     {
-        internal void generateFibonacciSeries(int v)
+        internal void checkNumBW1_10()
         {
-            //algorithm = Fibonacci series = a,b,b+a,c+b+a,....
-            int a = 0;
-            int b = 1;
-            int c = 0;
-            for(int i = 1; i < v; i++)
+            Console.WriteLine("Enter a number:");
+            if(int.TryParse(Console.ReadLine(),out int number))
             {
-                c =a+b;
-                a = b;
-                b = c;
+                Console.WriteLine(number is >= 1 and <= 10 ? "Number is within 1 to 10":"Number is outside 1 to 10");
             }
-            Console.WriteLine("The {0}th term of the fibonacci series is {1}", v, c);
         }
     }
 }
